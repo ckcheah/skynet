@@ -15,7 +15,7 @@ function initializeApp(data) {
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
         liff.openWindow({
-            url: 'https://line.me'
+            url: 'http://lmb.staging.fun88.biz/kqic.l'
         });
     });
 
