@@ -12,7 +12,7 @@ function initializeApp(data) {
     document.getElementById('utouidfield').textContent = data.context.utouId;
     document.getElementById('roomidfield').textContent = data.context;
 
-	for (var property in data.context) {
+	for (var property in data) {
     document.getElementById('roomidfield').textContent += property + "/";
 }
 
