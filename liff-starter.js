@@ -10,7 +10,7 @@ function initializeApp(data) {
     document.getElementById('useridfield').textContent = data.context.userId;
     document.getElementById('utouidfield').textContent = data.context.utouId;
     document.getElementById('roomidfield').textContent = data.context.roomId;
-	alert(window.location.href);
+	alert(document.referrer);
 	
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
