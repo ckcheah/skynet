@@ -1,8 +1,5 @@
 window.onload = function (e) {
     liff.init(function (data) {
-		for (var property in liff) {
-    document.getElementById('roomidfield').textContent += property + "/";
-	
         initializeApp(data);
     });
 };
