@@ -10,8 +10,11 @@ function initializeApp(data) {
     document.getElementById('viewtypefield').textContent = data.context.viewType;
     document.getElementById('useridfield').textContent = data.context.squareMemberId;
     document.getElementById('utouidfield').textContent = data.context.squareId;
-    document.getElementById('roomidfield').textContent = data.squareChatId;
+    document.getElementById('roomidfield').textContent = data.context.squareChatId;
 
+	for (var property in data.context) {
+   document.getElementById('languagefield').textContent += property + "/";
+}
 	
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
