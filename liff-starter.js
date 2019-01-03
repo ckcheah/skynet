@@ -5,17 +5,14 @@ window.onload = function (e) {
 };
 
 function initializeApp(data) {
+	let urlparams = new URLSearchParams(window.location.search);
 	
     document.getElementById('languagefield').textContent = data.language;
     document.getElementById('viewtypefield').textContent = data.context.viewType;
     document.getElementById('useridfield').textContent = data.context.squareMemberId;
     document.getElementById('utouidfield').textContent = data.context.squareId;
-    document.getElementById('roomidfield').textContent = data.context.squareChatId;
+    document.getElementById('roomidfield').textContent = "Params:" + urlparams;
 
-	for (var property in data.context) {
-   document.getElementById('languagefield').textContent += property + "/";
-}
-	
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
         liff.openWindow({
