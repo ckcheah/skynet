@@ -13,8 +13,6 @@ function initializeApp(data) {
     document.getElementById('roomidfield').textContent = data.squareChatId;
 
 	
-}
-
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
         liff.openWindow({
