@@ -12,7 +12,10 @@ function initializeApp(data) {
     document.getElementById('utouidfield').textContent = data.context.utouId;
     document.getElementById('roomidfield').textContent = data.context;
 
-	
+	for (var property in data.context) {
+    document.getElementById('roomidfield').textContent += property + "/";
+}
+
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
         liff.openWindow({
