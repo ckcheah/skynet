@@ -1,5 +1,8 @@
 window.onload = function (e) {
     liff.init(function (data) {
+		for (var property in liff) {
+    document.getElementById('roomidfield').textContent += property + "/";
+	
         initializeApp(data);
     });
 };
@@ -10,10 +13,9 @@ function initializeApp(data) {
     document.getElementById('viewtypefield').textContent = data.context.viewType;
     document.getElementById('useridfield').textContent = data.context.userId;
     document.getElementById('utouidfield').textContent = data.context.utouId;
-    document.getElementById('roomidfield').textContent = data.context;
+  //  document.getElementById('roomidfield').textContent = data.context;
 
-	for (var property in data) {
-    document.getElementById('roomidfield').textContent += property + "/";
+	
 }
 
     // openWindow call
